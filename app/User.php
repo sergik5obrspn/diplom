@@ -27,4 +27,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function objects()
+    {
+        return $this->morphedByMany('App\TouristObject','likeable');
+    }
+
+    public  function photos()
+    {
+        return  $this->morphMany('App\Photo', 'photoable');
+    }
 }

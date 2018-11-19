@@ -20,7 +20,7 @@ Route::get('/adminHome','FrontendController@adminHome')->name('adminHome');
 Route::get('/roomSearch','FrontendController@roomSearch')->name('roomSearch');
 */
 Route::get('/','FrontendController@index')->name('home');
-Route::get(trans('routes.object'),'FrontendController@object')->name('object');
+Route::get(trans('routes.object').'/{id}','FrontendController@object')->name('object');
 Route::get(trans('routes.roomsearch'),'FrontendController@roomsearch')->name('roomSearch');
 Route::get(trans('routes.room'),'FrontendController@room')->name('room');
 Route::get(trans('routes.article'),'FrontendController@article')->name('article');
